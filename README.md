@@ -42,7 +42,7 @@ Pemetaan nama diatur di `config.yaml` bagian `label_display`, sehingga
 ## Menjalankan secara lokal
 
 ```bash
-cd klasifikasi-sampah-app
+cd klasifikasi-sampah-abmas
 
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
