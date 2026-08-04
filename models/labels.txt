@@ -1,0 +1,5 @@
+0 Organic_Full
+1 B3_Full
+2 Cardboard Primer
+3 Recycle Primer
+4 Residu Primer

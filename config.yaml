@@ -1,0 +1,38 @@
+# =============================================================================
+# Konfigurasi aplikasi: Klasifikasi Sampah (contoh penggunaan template)
+# =============================================================================
+
+app:
+  title: "Klasifikasi Sampah"
+  subtitle: "Unggah foto sampah untuk mengetahui kategorinya."
+  icon: "♻️"
+  about: |
+    Aplikasi ini mengklasifikasikan foto sampah ke dalam lima kategori
+    menggunakan model MobileNet hasil pelatihan Teachable Machine.
+
+    Kategori mengikuti pemilahan sampah pada program pengabdian masyarakat:
+    organik, B3, kertas/kardus, daur ulang, dan residu.
+
+model:
+  path: "models/keras_model.h5"
+  labels_path: "models/labels.txt"
+  input_size: [224, 224]
+  normalization: "teachable_machine"
+  resize_mode: "center_crop"
+  apply_softmax: false
+
+inference:
+  top_k: 3
+  confidence_threshold: 0.60
+
+ui:
+  show_all_probabilities: true
+  max_upload_mb: 10
+  allowed_types: ["jpg", "jpeg", "png", "webp", "bmp"]
+
+label_display:
+  Organic_Full: "Organik"
+  B3_Full: "B3 (Bahan Berbahaya & Beracun)"
+  Cardboard Primer: "Kertas & Kardus"
+  Recycle Primer: "Daur Ulang"
+  Residu Primer: "Residu"
